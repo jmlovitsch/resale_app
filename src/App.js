@@ -5,7 +5,9 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 
 function App() {
-  return (
+
+
+    return (
     <div className="App">
         <Header />
         <Body />

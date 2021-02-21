@@ -1,5 +1,30 @@
-.body {
-    min-height:1000px;
-    background-color: rgb(231, 0, 0);
+@import "./body/Altarware.scss";
+@import "./body/Vestments.scss";
+@import "./body/Home.scss";
+@import "./body/Artwork.scss";
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    animation-delay: 5s;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.body {
+  color: white;
+  box-sizing: border-box;
+  min-height: 87vh;
+  background-color: black;
+  & div {
+    padding: 3%;
+    opacity: 1;
+    transition: opacity 5s;
+    
+    min-height: inherit;
+    animation-name: fadeIn;
+  }
 }
