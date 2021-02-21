@@ -1,4 +1,10 @@
+@import "./CSS/Header.scss";
+@import "./CSS/Body.scss";
+@import "./CSS/Footer.scss";
+
 .App {
+  min-height: 100vh;
+  max-width: 100vw;
   text-align: center;
 }
 
