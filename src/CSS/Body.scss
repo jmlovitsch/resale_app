@@ -19,12 +19,82 @@
   box-sizing: border-box;
   min-height: 87vh;
   background-color: black;
-  & div {
+
+  > div {
     padding: 3%;
-    opacity: 1;
-    transition: opacity 5s;
-    
     min-height: inherit;
-    animation-name: fadeIn;
+    -webkit-animation: fadein 2s, grow 4s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s, grow 4s; /* Firefox < 16 */
+    -ms-animation: fadein 2s, grow 4s; /* Internet Explorer */
+    -o-animation: fadein 2s, grow 4s; /* Opera < 12.1 */
+    animation: fadein 2s, grow 4s;
+
+  }
+
+
+  @keyframes grow {
+    from {
+      font-size: .1em;
+    }
+    to {
+      font-size: 1em;
+    }
+  }
+
+  @-moz-keyframes grow {
+    from {
+      font-size: 1rem;
+    }
+    to {
+      font-size: 4rem;
+    }
+  }
+
+  @-webkit-keyframes grow {
+    from {
+      font-size: 1rem;
+    }
+    to {
+      font-size: 4rem;
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Firefox < 16 */
+  @-moz-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }

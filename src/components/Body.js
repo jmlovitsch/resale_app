@@ -13,7 +13,7 @@ const Body = () => {
   return (
     <div className="body">
       <Redirect exact from="/" to="/home" />
-          <Switch >
+          <Switch style={{backgroundColor: "initial"}} >
             <Route exact path="/home" component={Home} />
             <Route exact path="/vestments" component={Vestments} />
             <Route exact path="/altarware" component={Altarware} />
